@@ -70,6 +70,8 @@ restart_quiz.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
     winner_sound.currentTime = 0;
     winner_sound.pause();
+    question_sound.play();
+    question_sound.volume = 0.5;
 }
 
 // if quitQuiz button clicked
@@ -177,6 +179,7 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     winner_sound.play();
     winner_sound.volume = 0.5;
+
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>Your score: <p>'+ userScore +'/'+ questions.length +'</p> </span>';
