@@ -186,6 +186,8 @@ function showResult(){
     const scoreText = result_box.querySelector(".score_text");
     winner_sound.play();
     winner_sound.volume = 0.5;
+    answer_sound.currentTime = 0;
+    answer_sound.pause();
 
     if (userScore > 3){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
