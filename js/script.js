@@ -12,6 +12,7 @@ const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 const question_sound = document.getElementById("question_sound");
 const winner_sound = document.getElementById("winner_sound");
+const answer_sound = document.getElementById("answer_sound");
 
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
@@ -100,6 +101,9 @@ next_btn.onclick = ()=>{
         timeText.textContent = "Remaining Time:"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
         question_sound.play();
+        answer_sound.currentTime = 0;
+        answer_sound.pause();
+
     }else{
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
@@ -125,6 +129,7 @@ function showQuestions(index){
     que_text.innerHTML = que_tag; //adding new span tag inside que_tag
     option_list.innerHTML = option_tag; //adding new div tag inside option_tag
 
+
     const option = option_list.querySelectorAll(".option");
 
     // set onclick attribute to all available options
@@ -145,6 +150,8 @@ function optionSelected(answer){
     const allOptions = option_list.children.length; //getting all option items
     question_sound.currentTime = 0;
     question_sound.pause();
+    answer_sound.play();
+    answer_sound.volume = 0.5;
 
     if(userAns == correcAns){ //if user selected option is equal to array's correct answer
         userScore += 1; //upgrading score value with 1
