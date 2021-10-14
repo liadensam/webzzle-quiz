@@ -68,11 +68,15 @@ restart_quiz.onclick = ()=>{
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
     next_btn.classList.remove("show"); //hide the next button
+    winner_sound.currentTime = 0;
+    winner_sound.pause();
 }
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
     window.location.reload(); //reload the current window
+    winner_sound.currentTime = 0;
+    winner_sound.pause();
 }
 
 const next_btn = document.querySelector("footer .next_btn");
