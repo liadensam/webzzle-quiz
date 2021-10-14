@@ -14,6 +14,18 @@ const question_sound = document.getElementById("question_sound");
 const winner_sound = document.getElementById("winner_sound");
 const answer_sound = document.getElementById("answer_sound");
 
+
+//go home
+document.getElementById("go_home").onclick = function () {
+  location.href = "https://www.youtube.com/";
+};
+
+//logout
+document.getElementById("logout").onclick = function () {
+  location.href = "https://www.youtube.com/";
+};
+
+
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
@@ -85,7 +97,6 @@ quit_quiz.onclick = ()=>{
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// next_btn.addEventListener("click", function(){ question_sound.play(); })
 
 // if Next Que button clicked
 next_btn.onclick = ()=>{
