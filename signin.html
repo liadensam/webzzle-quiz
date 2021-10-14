@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
+    <title>Sign in</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAweome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -12,11 +12,11 @@
 <body>
 
     <!-- Sign up form -->
-    <h1 class="quiz_name">Sign up</h1>
+    <h1 class="quiz_name">Sign in</h1>
 
     <div class="logo_sm"></div>
 
-    <form role="form" onsubmit="signUp(event);" autocomplete="off" id="form">
+    <form role="form" onsubmit="signIn(event);" autocomplete="off" id="form">
 
       <ul class="flex_form">
 
@@ -28,18 +28,6 @@
               name="username"
               id="username"
               placeholder="User name"
-              required
-            />
-        </li>
-
-        <li>
-            <label for="email"></label>
-            <i class="far fa-envelope icon"></i>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
               required
             />
         </li>
@@ -57,10 +45,10 @@
         </li>
 
         <li class="form_signup_btn">
-            <button type="submit" id="submit">Sign up</button>
+            <button type="submit" id="submit">Sign in</button>
         </li>
 
-        <li class="msg" id="duplicate-msg"></li></li>
+        <li class="msg" id="incorrectLogin-msg"></li></li>
 
          
     </ul>
@@ -76,8 +64,8 @@
     <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="js/script.js"></script>
 
-    <!-- Inside this JavaScript file I've inserted the forms functions-->
-    <script src="forms.js"></script>
+     <!-- Inside this JavaScript file I've inserted the forms functions-->
+     <script src="forms.js"></script>
 
 </body>
 </html>
