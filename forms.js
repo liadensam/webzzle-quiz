@@ -37,7 +37,7 @@ const signIn = e => {
         document.getElementById("incorrectLogin-msg").innerHTML = "Incorrect login credentials! <br> Please <a href='signup.html'>Sign up</a>.";
     }
     else{
-        location.href = "index.html";
+        location.href = "quizz.html";
     }
     e.preventDefault();
 }
