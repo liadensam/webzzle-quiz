@@ -16,14 +16,22 @@ const answer_sound = document.getElementById("answer_sound");
 
 
 //go home
-document.getElementById("go_home").onclick = function () {
-  location.href = "https://www.youtube.com/";
-};
+document.getElementById("go_home").onclick = function (){
+  if(confirm("Would you like go to other page?")){
+      window.location = "https://www.youtube.com/";
+  }else{
+      //stays on the same page          
+  }
+}
 
 //logout
-document.getElementById("logout").onclick = function () {
-  location.href = "https://www.youtube.com/";
-};
+document.getElementById("logout").onclick = function (){
+  if(confirm("Would you like go to other page?")){
+      window.location = "https://www.youtube.com/";
+  }else{
+      //stays on the same page          
+  }
+}
 
 
 // if startQuiz button clicked
