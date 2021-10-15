@@ -154,6 +154,15 @@ li a:hover {
   text-decoration: none;
 }
 
+/* media queries */
+@media (max-width: 1500px) {
+  .flex_form {
+    top: 70%;
+  }
+}
+
+
+
 /* TRISTAN END */
 
 :root {
