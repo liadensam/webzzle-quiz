@@ -1,14 +1,26 @@
 //WELCOME PAGE
 
-window.onload = function(){
-  document.getElementById("sign_in_welcome").onclick=function(){
-    window.location = "./signin.html";
-  }
+// window.onload = function(){
+//   document.getElementById("sign_in_welcome").onclick=function(){
+//     window.location = "./signin.html";
+//   }
+// }
+
+
+// document.getElementById("sign_up_welcome").onclick = function (){
+//   window.location = "./signup.html";
+// }
+
+function sign_in_welcome() {
+  document.getElementById("sign_in_welcome").onclick = function (){
+  window.location = "./signin.html";
+}
 }
 
-
-document.getElementById("sign_up_welcome").onclick = function (){
+function sign_up_welcome() {
+  document.getElementById("sign_up_welcome").onclick = function (){
   window.location = "./signup.html";
+}
 }
 
 
