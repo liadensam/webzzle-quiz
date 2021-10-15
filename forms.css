@@ -12,10 +12,9 @@
 /* logos */
 .logo {
   background-image: url("img/webzzle-logo-white.svg");
-  grid-column: 2;
   width: 80%;
-  height: 100vh;
-  margin-top: 6rem;
+  height: 60vh;
+  margin-top: 4rem;
   background-repeat: no-repeat;
   background-size: contain;
   justify-self: center;
@@ -25,7 +24,7 @@
   background-image: url("img/webzzle-logo-small.svg");
   grid-column: 1;
   grid-row: 1;
-  width: 30%;
+  width: 80px;
   height: 100vh;
   margin-top: 4rem;
   background-repeat: no-repeat;
@@ -33,27 +32,59 @@
   justify-self: center;
 }
 
+.sign_main {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* sign-in and sign-up buttons  */
 
+.sign_in_title {
+  text-align: center;
+  font-size: 6rem;
+  margin-top: 6rem;
+  line-height: 6.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 5rem;
+}
+
+.welcome-page-flex {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.sign_btn_flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .signin_btn {
-  position: absolute;
+  margin-bottom: 2rem;
+  /* position: absolute;
   top: 75%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .signup_btn {
-  position: absolute;
+  /* position: absolute;
   top: 85%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
-.signin_btn button, .signup_btn button {
+.signin_btn button,
+.signup_btn button {
   width: 500px;
   font-size: 2rem;
   font-weight: 500;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   padding: 0.5rem 4rem;
   outline: none;
   border: none;
@@ -63,13 +94,16 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.signin_btn button:hover, .signup_btn button:hover {
-  background: #EDA056;
+.signin_btn button:hover,
+.signup_btn button:hover {
+  background: #672ab7;
+  transform: scale(1.02);
+  transition: transform 100ms;
 }
 
 button a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* form flexbox */
@@ -81,11 +115,13 @@ ul {
 .flex_form {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 55%;
+  /* position: absolute;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40em;
+  transform: translate(-50%, -50%); */
+  justify-content: center;
+  /* align-items: center; */
+  width: 40rem;
   gap: 30px;
 }
 
@@ -99,14 +135,13 @@ input {
   width: 100%;
   border: 3px solid #672ab7;
   border-radius: 30px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-::placeholder { 
+::placeholder {
   color: #672ab7;
   text-align: left;
 }
-
 
 .icon {
   padding-top: 40px;
@@ -116,11 +151,20 @@ input {
   color: #672ab7;
 }
 
+.sign_up_title {
+  text-align: center;
+  font-size: 6rem;
+  margin-top: 6rem;
+  line-height: 6.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 5rem;
+}
+
 .form_signup_btn button {
   width: 250px;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   padding: 0.5rem;
   outline: none;
   border: none;
@@ -130,6 +174,11 @@ input {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.form_signup_btn button:hover {
+  transform: scale(1.02);
+  transition: transform 100ms;
+}
+
 .form_signup_btn {
   align-self: end;
   margin-top: 30px;
@@ -137,7 +186,7 @@ input {
 
 /* error messages */
 .msg {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 20px;
   text-align: right;
   margin-top: 20px;
@@ -145,7 +194,7 @@ input {
 }
 
 li a {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: underline;
 }
 
@@ -161,18 +210,31 @@ li a:hover {
   }
 }
 
-
-
 /* TRISTAN END */
 
 :root {
   color: #22054f;
-  background-color: blue;
-  background-image: linear-gradient(217deg, #d91c74, #074dd9),
-    linear-gradient(90deg, #994ced, #ffff);
+  background-color: #9660db;
+  /* background-image: linear-gradient(217deg, #d91c74, #074dd9),
+    linear-gradient(90deg, #994ced, #ffff); */
+  background-image: linear-gradient(-45deg, #eda056, #b503a6, #4bc0c8);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 300% 300%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .start_btn,
@@ -215,7 +277,7 @@ body {
 .start_btn button {
   font-size: 2rem;
   font-weight: 500;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   padding: 1.5rem 4rem;
   outline: none;
   border: none;
@@ -330,7 +392,7 @@ ul li::before {
 }
 
 .quiz_box header .timer {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   border: none;
   height: 45px;
   width: 160px;
@@ -351,7 +413,7 @@ ul li::before {
 .quiz_box header .timer .timer_sec {
   font-size: 1rem;
   font-weight: 500;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   /* line-height: 30px; */
   text-align: center;
   user-select: none;
@@ -382,7 +444,7 @@ section .option_list {
 }
 
 section .option_list .option {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   background: #672ab7;
   border: 0.2rem solid #672ab7;
   border-radius: 100px;
@@ -409,13 +471,13 @@ section .option_list .option:hover {
 
 section .option_list .option.correct {
   color: #4bc0c8;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   border: 0.2rem solid #4bc0c8;
 }
 
 section .option_list .option.incorrect {
   color: #fb0ae8;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   border: 0.2rem solid #fb0ae8;
 }
 
@@ -476,7 +538,7 @@ footer button {
   cursor: pointer;
   border: none;
   outline: none;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   background: #fb0ae8;
   line-height: 10px;
@@ -555,7 +617,7 @@ footer button.show {
 }
 
 .buttons button.restart {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   background: #fb0ae8;
 }
 
@@ -565,12 +627,12 @@ footer button.show {
 
 .buttons button.quit {
   color: #fb0ae8;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(5px);
 }
 
 .buttons button.quit:hover {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   background: #fb0ae8;
 }

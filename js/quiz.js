@@ -15,19 +15,19 @@ const winner_sound = document.getElementById("winner_sound");
 const answer_sound = document.getElementById("answer_sound");
 
 
-//go home
-document.getElementById("go_home").onclick = function (){
-  if(confirm("Would you like go to other page?")){
-      window.location = "https://www.youtube.com/";
-  }else{
-      //stays on the same page          
-  }
-}
+// go home
+// document.getElementById("go_home").onclick = function (){
+//   if(confirm("Would you like go to other page?")){
+//       window.location = "https://www.youtube.com/";
+//   }else{
+//       stays on the same page          
+//   }
+// }
 
 //logout
 document.getElementById("logout").onclick = function (){
-  if(confirm("Would you like go to other page?")){
-      window.location = "https://www.youtube.com/";
+  if(confirm("Are you sure you want to logout?")){
+      window.location = "./welcome.html";
   }else{
       //stays on the same page          
   }

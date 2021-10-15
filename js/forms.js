@@ -16,7 +16,7 @@ const signUp = e => {
         localStorage.setItem('formData', JSON.stringify(formData));
         document.querySelector('form').reset();
         document.getElementById('username').focus();
-        alert("Account Created.\n\nPlease Sign In using the link below.");
+        alert("Account Created.\n\nPlease Sign In.");
         location.href = "signin.html";
     }
     else{
@@ -37,7 +37,7 @@ const signIn = e => {
         document.getElementById("incorrectLogin-msg").innerHTML = "Incorrect login credentials! <br> Please <a href='signup.html'>Sign up</a>.";
     }
     else{
-        location.href = "quizz.html";
+        location.href = "quiz.html";
     }
     e.preventDefault();
 }

@@ -9,10 +9,10 @@
 
 :root {
   color: #22054f;
-  background-color: blue;
+  background-color: #9660db;
   /* background-image: linear-gradient(217deg, #d91c74, #074dd9),
     linear-gradient(90deg, #994ced, #ffff); */
-  background-image: linear-gradient(-45deg, #eda056, #b503a6, #9660db, #4bc0c8);
+  background-image: linear-gradient(-45deg, #eda056, #b503a6, #4bc0c8);
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* background-size: cover; */
@@ -56,7 +56,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   justify-self: center;
-  cursor: pointer;
 }
 
 .logout {
@@ -69,6 +68,10 @@ body {
   margin-top: 4.5rem;
   justify-self: center;
   cursor: pointer;
+}
+
+.logout:hover {
+  background-image: url("img/logout-hover.svg");
 }
 
 .quiz_name {

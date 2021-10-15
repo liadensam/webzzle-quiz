@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forms.css">
     <!-- FontAweome CDN Link for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
+  <div class="logo_sm"></div>
 
     <!-- Sign up form -->
-    <h1 class="quiz_name">Sign up</h1>
-
-    <div class="logo_sm"></div>
+<div class="sign_main">
+    <h1 class="sign_up_title">Sign up</h1>
 
     <form role="form" onsubmit="signUp(event);" autocomplete="off" id="form">
 
@@ -49,7 +49,7 @@
             <label for="password"></label>
             <i class="material-icons icon" style="font-size:25px;">vpn_key</i>
             <input
-              type="text"
+              type="password"
               name="password"
               id="password"
               placeholder="Password"
@@ -67,7 +67,7 @@
     </ul>
 
     </form>
-    
+</div> 
 
 
 
@@ -78,7 +78,7 @@
     <script src="js/script.js"></script>
 
     <!-- Inside this JavaScript file I've inserted the forms functions-->
-    <script src="forms.js"></script>
+    <script src="js/forms.js"></script>
 
 </body>
 </html>
