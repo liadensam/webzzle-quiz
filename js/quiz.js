@@ -2,8 +2,8 @@
 const start_btn = document.querySelector(".start_btn button");
 const quiz_name = document.querySelector(".quiz_name");
 const info_box = document.querySelector(".info_box");
-const exit_btn = info_box.querySelector(".buttons .quit");
-const continue_btn = info_box.querySelector(".buttons .restart");
+const exit_btn = document.querySelector(".buttons .quit");
+const continue_btn = document.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
@@ -32,6 +32,8 @@ document.getElementById("logout").onclick = function (){
       //stays on the same page          
   }
 }
+
+
 
 
 // if startQuiz button clicked

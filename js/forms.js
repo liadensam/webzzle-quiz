@@ -1,12 +1,16 @@
 //WELCOME PAGE
 
-document.getElementById("sign_in_welcome").onclick = function (){
-      window.location = "./signin.html";
+window.onload = function(){
+  document.getElementById("sign_in_welcome").onclick=function(){
+    window.location = "./signin.html";
+  }
 }
+
 
 document.getElementById("sign_up_welcome").onclick = function (){
   window.location = "./signup.html";
 }
+
 
 //SIGN UP
 const signUp = e => {
@@ -27,7 +31,7 @@ const signUp = e => {
         document.querySelector('form').reset();
         document.getElementById('username').focus();
         alert("Account Created.\n\nPlease Sign In.");
-        location.href = "signin.html";
+        location.href = "./signin.html";
     }
     else{
         alert("Duplicate found!\nYou have already signed up");
@@ -47,7 +51,7 @@ const signIn = e => {
         document.getElementById("incorrectLogin-msg").innerHTML = "Incorrect login credentials! <br> Please <a href='signup.html'>Sign up</a>.";
     }
     else{
-        location.href = "quiz.html";
+        location.href = "./quiz.html";
     }
     e.preventDefault();
 }
