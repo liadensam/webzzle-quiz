@@ -72,12 +72,12 @@
   transform: translate(-50%, -50%); */
 }
 
-.signup_btn {
-  /* position: absolute;
+/* .signup_btn {
+  position: absolute;
   top: 85%;
   left: 50%;
-  transform: translate(-50%, -50%); */
-}
+  transform: translate(-50%, -50%);
+} */
 
 .signin_btn button,
 .signup_btn button {

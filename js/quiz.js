@@ -97,7 +97,8 @@ restart_quiz.onclick = ()=>{
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
-    window.location.reload(); //reload the current window
+    window.location = "./welcome.html";
+    //window.location.reload();
     winner_sound.currentTime = 0;
     winner_sound.pause();
 }
@@ -117,7 +118,7 @@ next_btn.onclick = ()=>{
         clearInterval(counterLine); //clear counterLine
         startTimer(timeValue); //calling startTimer function
         startTimerLine(widthValue); //calling startTimerLine function
-        timeText.textContent = "Remaining Time:"; //change the timeText to Time Left
+        timeText.textContent = "Remaining Time:"; //change the timeText to remaining Time
         next_btn.classList.remove("show"); //hide the next button
         question_sound.play();
         answer_sound.currentTime = 0;

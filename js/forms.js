@@ -1,3 +1,13 @@
+//WELCOME PAGE
+
+document.getElementById("sign_in_welcome").onclick = function (){
+      window.location = "./signin.html";
+}
+
+document.getElementById("sign_up_welcome").onclick = function (){
+  window.location = "./signup.html";
+}
+
 //SIGN UP
 const signUp = e => {
     let fname = document.getElementById('username').value,
