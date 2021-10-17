@@ -437,6 +437,7 @@ footer button.show {
   font-weight: 800;
 }
 
+
 .result_box .buttons {
   display: flex;
   margin: 2rem 0;
@@ -539,4 +540,16 @@ footer button.show {
   border: 2px solid #fb0ae8;
   transition: all 0.3s ease;
   box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.feedback_box .feedback_text span {
+  display: flex;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.feedback_box .feedback_text span p {
+  padding: 0 0.2rem;
+  font-weight: 800;
 }

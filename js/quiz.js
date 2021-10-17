@@ -120,6 +120,16 @@ feedback_quiz.onclick = ()=>{
     result_box.classList.remove("activeResult"); //hide result box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     feedback_box.classList.add("activeFeedback") //show feedback page
+
+    const feedbackText = document.querySelector(".feedback_text"); 
+    for(let i=0; i < questions.length; i++)
+    feedbackText.innerHTML += +questions[i].numb+"<p>"+questions[i].answer+"</p><br>";
+
+    /* questions.answer.forEach(function(test) {
+        feedbackText.innerHTML = test;
+      }); */
+
+
 }
 
 // if restartQuizFeedback button clicked
@@ -184,9 +194,6 @@ next_btn.onclick = ()=>{
         showResult(); //calling showResult function
     }
 }
-
-
-
 
 
 
