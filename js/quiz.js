@@ -15,14 +15,7 @@ const winner_sound = document.getElementById("winner_sound");
 const answer_sound = document.getElementById("answer_sound");
 
 
-// go home
-// document.getElementById("go_home").onclick = function (){
-//   if(confirm("Would you like go to other page?")){
-//       window.location = "https://www.youtube.com/";
-//   }else{
-//       stays on the same page          
-//   }
-// }
+
 
 //logout
 document.getElementById("logout").onclick = function (){
@@ -39,15 +32,17 @@ document.getElementById("logout").onclick = function (){
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
-    start_btn.style.display = "none";
-    quiz_name.style.display = "none";
+    start_btn.style.opacity = "0";
+    quiz_name.style.opacity = "0";
 }
 
 // if exitQuiz button clicked
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
-    start_btn.style.display = "";
-    quiz_name.style.display = "";
+    start_btn.classList.add("transition");
+    start_btn.style.opacity = "1";
+    quiz_name.classList.add("transition");
+    quiz_name.style.opacity = "1";
 }
 
 
@@ -159,9 +154,6 @@ function showQuestions(index){
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
-// creating the new div tags which for icons
-// let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-// let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 //if user clicked on option
 function optionSelected(answer){
