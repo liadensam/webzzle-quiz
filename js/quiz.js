@@ -102,14 +102,14 @@ quit_quiz.onclick = ()=>{
     winner_sound.pause();
 }
 
-// // ***Tristan START***
+// ***Tristan START***
 
 // const feedback_quiz = result_box.querySelector(".feedback_btn"); //Tristan
 // const restart_quiz_feedback = feedback_box.querySelector(".buttons .restart");
 // const quit_quiz_feedback = feedback_box.querySelector(".buttons .quit");
 
 
-// //if SeeCorrectAnswers button clicked
+// if SeeCorrectAnswers button clicked
 // feedback_quiz.onclick = ()=>{
 //     info_box.classList.remove("activeInfo"); //hide info box
 //     result_box.classList.remove("activeResult"); //hide result box
@@ -126,7 +126,7 @@ quit_quiz.onclick = ()=>{
 
 // }
 
-// // if restartQuizFeedback button clicked
+// if restartQuizFeedback button clicked
 // restart_quiz_feedback.onclick = ()=>{
 //     quiz_box.classList.add("activeQuiz"); //show quiz box
 //     result_box.classList.remove("activeResult"); //hide result box
@@ -152,15 +152,15 @@ quit_quiz.onclick = ()=>{
 // }
 
 
-// // if quitQuizFeedback button clicked
+// if quitQuizFeedback button clicked
 // quit_quiz_feedback.onclick = ()=>{
 //     window.location = "./welcome.html";
-//     //window.location.reload();
+//     window.location.reload();
 //     winner_sound.currentTime = 0;
 //     winner_sound.pause();
 // }
 
-// // ***Tristan END***
+// ***Tristan END***
 
 
 
