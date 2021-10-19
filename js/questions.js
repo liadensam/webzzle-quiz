@@ -15,32 +15,32 @@ let questions = [
   {
   numb: 2,
   question: "Choose the correct HTML element for the largest heading:",
-  answer: "A. < h1 >",
+  answer: "A. &lt;h1&gt;",
   options: [
-    "A. < h1 >",
-    "B. < heading >",
-    "C. < h6 >"
+    "A. &lt;h1&gt;",
+    "B. &ltheading&gt",
+    "C. &lth6&gt"
   ]
 },
   {
   numb: 3,
   question: "How can you create ordered list?",
-  answer: "B. < ol >",
+  answer: "B. &ltol&gt",
   options: [
-    "A. < list >",
-    "B. < ol >",
-    "C. < ul >"
+    "A. &ltlist&gt",
+    "B. &ltol&gt",
+    "C. &ltul&gt"
   ]
 },
 ];
 // {
 //   numb: 4,
 //   question: "Choose the correct HTML element to define important text",
-//   answer: "C. < strong >",
+//   answer: "C. &ltstrong&gt",
 //   options: [
-//     "A. < important >",
-//     "B. < i >",
-//     "C. < strong >"
+//     "A. &ltimportant&gt",
+//     "B. &lti&gt",
+//     "C. &ltstrong&gt"
 //   ]
 // },
 // {
@@ -48,7 +48,7 @@ let questions = [
 //   question: "Which character is used to indicate an end tag?",
 //   answer: "C. /",
 //   options: [
-//     "A. <",
+//     "A. &lt",
 //     "B. *",
 //     "C. /"
 //   ]
@@ -75,11 +75,11 @@ let questions = [
 // {
 //   numb: 8,
 //   question: "Which HTML tag is used to define an internal style sheet?",
-//   answer: "A. < style >",
+//   answer: "A. &ltstyle&gt",
 //   options: [
-//     "A. < style >",
-//     "B. < css >",
-//     "C. < script >"
+//     "A. &ltstyle&gt",
+//     "B. &ltcss&gt",
+//     "C. &ltscript&gt"
 //   ]
 // },
 // {
@@ -124,21 +124,21 @@ let questions = [
 // {
 //   numb: 13,
 //   question: "Inside which HTML element do we put the JavaScript?",
-//   answer: "B. < script >",
+//   answer: "B. &ltscript&gt",
 //   options: [
-//     "A. < js >",
-//     "B. < script >",
-//     "C. < javascript >"
+//     "A. &ltjs&gt",
+//     "B. &ltscript&gt",
+//     "C. &ltjavascript&gt"
 //   ]
 // },
 // {
 //   numb: 14,
 //   question: "What is the correct syntax for referring to an external script called "xxx.js"?",
-//   answer: "B. < script src="xxx.js" >",
+//   answer: "B. &ltscript src="xxx.js"&gt",
 //   options: [
-//     "A. < script name="xxx.js" >",
-//     "B. < script src="xxx.js" >",
-//     "C. < script href="xxx.js" >"
+//     "A. &ltscript name="xxx.js"&gt",
+//     "B. &ltscript src="xxx.js"&gt",
+//     "C. &ltscript href="xxx.js"&gt"
 //   ]
 // },
 // {
@@ -163,11 +163,11 @@ let questions = [
 // {
 //   numb: 17,
 //   question: "How does a WHILE loop start?",
-//   answer: "B. while (i <= 10)",
+//   answer: "B. while (i &lt= 10)",
 //   options: [
 //     "A. while i = 1 to 10",
-//     "B. while (i <= 10)",
-//     "C. while (i <= 10; i++)"
+//     "B. while (i &lt= 10)",
+//     "C. while (i &lt= 10; i++)"
 //   ]
 // },
 // {
