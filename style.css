@@ -393,103 +393,6 @@ li a:hover {
   transition: transform 100ms, -webkit-transform 100ms;
 }
 
-.result_box {
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 16px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 1.8rem 2rem;
-  width: 450px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translate(-50%, -50%) scale(0.9);
-          transform: translate(-50%, -50%) scale(0.9);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.result_box .winner-goblet img {
-  margin-bottom: 1rem;
-}
-
-.result_box .complete_text {
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.result_box .score_text span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1.5rem 0;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-.result_box .score_text span p {
-  padding: 0 0.2rem;
-  font-weight: 800;
-}
-
-.result_box .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 2rem 0;
-}
-
-.result_box .buttons button {
-  margin: 0 0.5rem;
-  height: 45px;
-  padding: 0 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  border-radius: 100px;
-  border: 2px solid #fb0ae8;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.buttons button.restart {
-  color: rgba(255, 255, 255, 0.9);
-  background: #fb0ae8;
-}
-
-.buttons button.restart:hover {
-  background: #fb0ae8;
-}
-
-.buttons button.quit {
-  color: #fb0ae8;
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
-
-.buttons button.quit:hover {
-  color: rgba(255, 255, 255, 0.9);
-  background: #fb0ae8;
-}
-
 .info_box,
 .quiz_box,
 .result_box {
@@ -833,5 +736,102 @@ footer button.show {
   color: #fb0ae8;
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid #fb0ae8;
+}
+
+.result_box {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.8rem 2rem;
+  width: 450px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+          transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.result_box .winner-goblet img {
+  margin-bottom: 1rem;
+}
+
+.result_box .complete_text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.result_box .score_text span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.result_box .score_text span p {
+  padding: 0 0.2rem;
+  font-weight: 800;
+}
+
+.result_box .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.result_box .buttons button {
+  margin: 0 0.5rem;
+  height: 45px;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 100px;
+  border: 2px solid #fb0ae8;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.buttons button.restart {
+  color: rgba(255, 255, 255, 0.9);
+  background: #fb0ae8;
+}
+
+.buttons button.restart:hover {
+  background: #fb0ae8;
+}
+
+.buttons button.quit {
+  color: #fb0ae8;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.buttons button.quit:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: #fb0ae8;
 }
 /*# sourceMappingURL=style.css.map */
