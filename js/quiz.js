@@ -89,6 +89,7 @@ restart_quiz.onclick = ()=>{
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
+    window.location.reload(); //Tristan -> to prevent duplicates in feedback page
     startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
@@ -122,10 +123,13 @@ feedback_quiz.onclick = ()=>{
     feedback_box.classList.add("activeFeedback") //show feedback page
 
     const feedbackText = document.querySelector(".feedback_text"); 
+    const uniqueQuestions = [...new Set(questions)];
     
-    for(let i=0; i < questions.length; i++) {
-    feedbackText.innerHTML += +questions[i].numb+". "+questions[i].question+"<p>"+questions[i].answer+"</p><br>";
+    
+    for(let i=0; i < questions.length; i++) { 
+    feedbackText.innerHTML += +uniqueQuestions[i].numb+". "+uniqueQuestions[i].question+"<p>"+uniqueQuestions[i].answer+"</p><br>";
     }
+
 }
 
 // if restartQuizFeedback button clicked
@@ -142,6 +146,7 @@ restart_quiz_feedback.onclick = ()=>{
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
+    window.location.reload(); //Tristan -> to prevent duplicates in feedback page
     startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
