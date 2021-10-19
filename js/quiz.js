@@ -122,14 +122,10 @@ feedback_quiz.onclick = ()=>{
     feedback_box.classList.add("activeFeedback") //show feedback page
 
     const feedbackText = document.querySelector(".feedback_text"); 
-    for(let i=0; i < questions.length; i++)
-    feedbackText.innerHTML += +questions[i].numb+"<p>"+questions[i].answer+"</p><br>";
-
-    /* questions.answer.forEach(function(test) {
-        feedbackText.innerHTML = test;
-      }); */
-
-
+    
+    for(let i=0; i < questions.length; i++) {
+    feedbackText.innerHTML += +questions[i].numb+". "+questions[i].question+"<p>"+questions[i].answer+"</p><br>";
+    }
 }
 
 // if restartQuizFeedback button clicked
