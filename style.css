@@ -15,6 +15,11 @@ body {
   gap: 1rem;
 }
 
+body > * {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
 :root {
   color: #22054f;
   background-color: #9660db;
@@ -52,8 +57,6 @@ body {
 
 /* welcome page flexbox*/
 .welcome-page-flex {
-  -ms-grid-column: 2;
-  grid-column: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,8 +165,6 @@ body {
 
 /* signing pages allignment and title */
 .sign_main {
-  -ms-grid-column: 2;
-  grid-column: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,6 +337,8 @@ li a:hover {
   -ms-grid-column-align: center;
       justify-self: center;
   cursor: pointer;
+  height: 50px;
+  width: 50px;
 }
 
 .logout:hover {
@@ -563,12 +566,6 @@ li a:hover {
   list-style-type: none;
 }
 
-ul li::before {
-  content: attr(data-icon);
-  font-size: 1rem;
-  margin-right: 0.5rem;
-}
-
 .info_box .info-list .info span {
   font-weight: 600;
 }
@@ -604,6 +601,12 @@ ul li::before {
           box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
+ul li::before {
+  content: attr(data-icon);
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
 /* quiz box */
 .quiz_box {
   width: 550px;
@@ -625,7 +628,7 @@ ul li::before {
   position: relative;
   z-index: 2;
   height: 70px;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 16px 16px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -636,11 +639,6 @@ ul li::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.quiz_box header .title {
-  font-size: 1.5rem;
-  font-weight: 600;
 }
 
 .quiz_box header .timer {
@@ -824,16 +822,16 @@ footer button:hover {
   background: #fb0ae8;
 }
 
-.next_btn:hover {
-  color: #fb0ae8;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #fb0ae8;
-}
-
 footer button.show {
   opacity: 1;
   pointer-events: auto;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.next_btn:hover {
+  color: #fb0ae8;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #fb0ae8;
 }
 /*# sourceMappingURL=style.css.map */

@@ -233,8 +233,9 @@ function startTimer(time){
             timeCount.textContent = "0" + addZero; //add a 0 before time value
         }
         if(time < 0){ //if timer is less than 0
+
             clearInterval(counter); //clear counter
-            timeText.textContent = "Time Out"; //change the time text to time off
+            timeText.textContent = "Time Out"; //change the time text to time out
             const allOptions = option_list.children.length; //getting all option items
             let correcAns = questions[que_count].answer; //getting correct answer from array
             for(i=0; i < allOptions; i++){
@@ -248,6 +249,11 @@ function startTimer(time){
                 option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
             }
             next_btn.classList.add("show"); //show the next button if user selected any option
+
+            question_sound.currentTime = 0;
+            question_sound.pause();
+            answer_sound.play();
+            answer_sound.volume = 0.5;
         }
     }
 }

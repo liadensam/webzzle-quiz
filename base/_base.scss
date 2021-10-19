@@ -9,6 +9,10 @@ body {
   @include body-grid();
 }
 
+body > * {
+  grid-column: 2;
+}
+
 :root {
   color: $dark-blue;
   background-color: $web-background-color;

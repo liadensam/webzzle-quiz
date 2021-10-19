@@ -1,6 +1,6 @@
 /* welcome page flexbox*/
 .welcome-page-flex {
-  grid-column: 2;
+  // grid-column: 2;
   @include flex-content-column-align();
 }
 

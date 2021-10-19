@@ -8,7 +8,7 @@
 
 /* signing pages allignment and title */
 .sign_main {
-  grid-column: 2;
+  // grid-column: 2;
   @include flex-content-column-align();
 
   .sign_in_title {
