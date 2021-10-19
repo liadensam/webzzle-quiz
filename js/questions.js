@@ -3,31 +3,31 @@ let questions = [
   {
   numb: 1,
   question: "What does HTML stand for?",
-  answer: "B. Hyper Text Markup Language",
+  answer: "B. Hyper Text Markup Language ",
   options: [
-    "A. Hyper Text Preprocessor",
-    "B. Hyper Text Markup Language",
-    "C. Hyper Tool Multi Language"
+    "A. Home Tool Markup Language",
+    "B. Hyper Text Markup Language ",
+    "C. Hyperlinks and Text Markup Language"
   ]
 },
   {
   numb: 2,
-  question: "What does CSS stand for?",
-  answer: "C. Cascading Style Sheet",
+  question: "Choose the correct HTML element for the largest heading:",
+  answer: "A. < h1 >",
   options: [
-    "A. Common Style Sheet",
-    "B. Colorful Style Sheet",
-    "C. Cascading Style Sheet"
+    "A. &lt;h1&gt;",
+    "B. &lt;heading&gt;",
+    "C. &lt;h6&gt;"
   ]
 },
   {
   numb: 3,
-  question: "What does PHP stand for?",
-  answer: "A. Hypertext Preprocessor",
+  question: "How can you create ordered list?",
+  answer: "B. < ol >",
   options: [
-    "A. Hypertext Preprocessor",
-    "B. Hypertext Programming",
-    "C. Hometext Preprocessor"
+    "A. < list >",
+    "B. < ol >",
+    "C. < ul >"
   ]
 },
 //   {
