@@ -89,7 +89,7 @@ restart_quiz.onclick = ()=>{
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
-    //window.location.reload(); //Tristan -> to prevent duplicates in feedback page
+    document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
     startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
@@ -153,7 +153,7 @@ restart_quiz_feedback.onclick = ()=>{
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
-   // window.location.reload(); //Tristan -> to prevent duplicates in feedback page
+    document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
     startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
