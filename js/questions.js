@@ -46,11 +46,11 @@ let questions = [
 {
   numb: 5,
   question: "Where is Smári?",
-  answer:  "C. Somewhere over the rainbow",
+  answer:  "C. In Lapland",
   options: [
-    "A. Moon",
-    "B. In Matrix",
-    "C. Somewhere over the rainbow"
+    "A. In Matrix",
+    "B. In Neverland",
+    "C. In Lapland"
   ]
 },
 ];
@@ -91,7 +91,7 @@ let questions = [
 //     "C. &ltul&gt"
 //   ]
 // },
-// ];
+
 // {
 //   numb: 4,
 //   question: "Choose the correct HTML element to define important text",
@@ -326,11 +326,11 @@ let questions = [
 // {
 //   numb: 27,
 //   question: "Where is Smári?",
-//   answer:  "A. Moon",
+//   answer:  "C. In Lapland",
 //   options: [
-//     "A. Moon",
-//     "B. In Matrix",
-//     "C. In neverland"
+//     "A. In Matrix",
+//     "B. In Neverland",
+//     "C. In Lapland"
 //   ]
 // },
 // {
