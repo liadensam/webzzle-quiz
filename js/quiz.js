@@ -6,8 +6,8 @@ const exit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
-const feedback_btn = document.querySelector(".feedback_btn"); // Tristan
-const feedback_box = document.querySelector(".feedback_box"); // Tristan
+const feedback_btn = document.querySelector(".feedback_btn"); 
+const feedback_box = document.querySelector(".feedback_box"); 
 const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
@@ -109,15 +109,9 @@ quit_quiz.onclick = ()=>{
     winner_sound.pause();
 }
 
-
-// ***Tristan START***
-
-const feedback_quiz = result_box.querySelector(".feedback_btn"); //Tristan
-const restart_quiz_feedback = feedback_box.querySelector(".buttons .restart");
-const quit_quiz_feedback = feedback_box.querySelector(".buttons .quit");
-
-
 //if SeeCorrectAnswers button clicked
+const feedback_quiz = result_box.querySelector(".feedback_btn");
+
 feedback_quiz.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
     result_box.classList.remove("activeResult"); //hide result box
@@ -134,45 +128,46 @@ feedback_quiz.onclick = ()=>{
 
 }
 
+// if restartQuiz button clicked 
 
-// if restartQuizFeedback button clicked
-restart_quiz_feedback.onclick = ()=>{
-  quiz_box.classList.add("activeQuiz"); //show quiz box
-  result_box.classList.remove("activeResult"); //hide result box
-  feedback_box.classList.remove("activeFeedback") //hide feedback page
-  timeValue = 15;
-  que_count = 0;
-  que_numb = 1;
-  userScore = 0;
-  widthValue = 0;
-  showQuestions(que_count); //calling showQestions function
-  queCounter(que_numb); //passing que_numb value to queCounter
-  clearInterval(counter); //clear counter
-  clearInterval(counterLine); //clear counterLine
-  document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
-  startTimer(timeValue); //calling startTimer function
-  startTimerLine(widthValue); //calling startTimerLine function
-  timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
-  next_btn.classList.remove("show"); //hide the next button
-  winner_sound.currentTime = 0;
-  winner_sound.pause();
-  question_sound.play();
-  question_sound.volume = 0.5;
+document.querySelectorAll('.restart').forEach(item => {
+    item.addEventListener('click', event => {
+        quiz_box.classList.add("activeQuiz"); //show quiz box
+        result_box.classList.remove("activeResult"); //hide result box
+        feedback_box.classList.remove("activeFeedback") //hide feedback page
+        timeValue = 15;
+        que_count = 0;
+        que_numb = 1;
+        userScore = 0;
+        widthValue = 0;
+        showQuestions(que_count); //calling showQestions function
+        queCounter(que_numb); //passing que_numb value to queCounter
+        clearInterval(counter); //clear counter
+        clearInterval(counterLine); //clear counterLine
+        document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
+        startTimer(timeValue); //calling startTimer function
+        startTimerLine(widthValue); //calling startTimerLine function
+        timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
+        next_btn.classList.remove("show"); //hide the next button
+        winner_sound.currentTime = 0;
+        winner_sound.pause();
+        question_sound.play();
+        question_sound.volume = 0.5;
+        
+        // calling the shuffle function
+        shuffleQuestions(questions);
+    })
+  })
 
-    // calling the shuffle function
-    shuffleQuestions(questions);
-}
-
-// if quitQuizFeedback button clicked
-quit_quiz_feedback.onclick = ()=>{
-  window.location = "./welcome.html";
-  //window.location.reload();
-  winner_sound.currentTime = 0;
-  winner_sound.pause();
-}
-
-// ***Tristan END***
-
+// if quitQuiz button clicked
+document.querySelectorAll('.quit').forEach(item => {
+    item.addEventListener('click', event => {
+        window.location = "./welcome.html";
+        //window.location.reload();
+        winner_sound.currentTime = 0;
+        winner_sound.pause();
+    })
+  })
 
 
 const next_btn = document.querySelector("footer .next_btn");
@@ -341,7 +336,7 @@ function startTimerLine(time){
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
         if(time > 549){ //if time value is greater than 549
-          clearInterval(counterLine); //clear counterLine
+            clearInterval(counterLine); //clear counterLine
         }
     }
 }
