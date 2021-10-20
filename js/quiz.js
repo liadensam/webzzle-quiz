@@ -56,8 +56,6 @@ exit_btn.onclick = ()=>{
 
 //Tristan to add 
 
-
-
 shuffleQuestions = (inputQuestions) => {
 inputQuestions.sort(()=> Math.random() - 0.5);
 questions.length = 4;
@@ -91,47 +89,49 @@ const restart_quiz = result_box.querySelector(".buttons .restart");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 
 // if restartQuiz button clicked
-restart_quiz.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 15;
-    que_count = 0;
-    que_numb = 1;
-    userScore = 0;
-    widthValue = 0;
-    showQuestions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
-    next_btn.classList.remove("show"); //hide the next button
-    winner_sound.currentTime = 0;
-    winner_sound.pause();
-    question_sound.play();
-    question_sound.volume = 0.5;
-    
-    //Tristan to add
 
-    shuffleQuestions(questions);
-}
+document.querySelectorAll('.restart').forEach(item => {
+    item.addEventListener('click', event => {
+        quiz_box.classList.add("activeQuiz"); //show quiz box
+        result_box.classList.remove("activeResult"); //hide result box
+        feedback_box.classList.remove("activeFeedback") //hide feedback page
+        timeValue = 15;
+        que_count = 0;
+        que_numb = 1;
+        userScore = 0;
+        widthValue = 0;
+        showQuestions(que_count); //calling showQestions function
+        queCounter(que_numb); //passing que_numb value to queCounter
+        clearInterval(counter); //clear counter
+        clearInterval(counterLine); //clear counterLine
+        document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
+        startTimer(timeValue); //calling startTimer function
+        startTimerLine(widthValue); //calling startTimerLine function
+        timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
+        next_btn.classList.remove("show"); //hide the next button
+        winner_sound.currentTime = 0;
+        winner_sound.pause();
+        question_sound.play();
+        question_sound.volume = 0.5;
+        
+        // calling the shuffle function
+        shuffleQuestions(questions);
+    })
+  })
 
 // if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
-    window.location = "./welcome.html";
-    //window.location.reload();
-    winner_sound.currentTime = 0;
-    winner_sound.pause();
-}
-
+document.querySelectorAll('.quit').forEach(item => {
+    item.addEventListener('click', event => {
+        window.location = "./welcome.html";
+        //window.location.reload();
+        winner_sound.currentTime = 0;
+        winner_sound.pause();
+    })
+  })
+  
 // ***Tristan START***
 
 const feedback_quiz = result_box.querySelector(".feedback_btn"); //Tristan
-const restart_quiz_feedback = feedback_box.querySelector(".buttons .restart");
-const quit_quiz_feedback = feedback_box.querySelector(".buttons .quit");
-
 
 //if SeeCorrectAnswers button clicked
 feedback_quiz.onclick = ()=>{
@@ -150,42 +150,6 @@ feedback_quiz.onclick = ()=>{
 
 }
 
-// if restartQuizFeedback button clicked
-restart_quiz_feedback.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    result_box.classList.remove("activeResult"); //hide result box
-    feedback_box.classList.remove("activeFeedback") //hide feedback page
-    timeValue = 15;
-    que_count = 0;
-    que_numb = 1;
-    userScore = 0;
-    widthValue = 0;
-    showQuestions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
-    timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
-    next_btn.classList.remove("show"); //hide the next button
-    winner_sound.currentTime = 0;
-    winner_sound.pause();
-    question_sound.play();
-    question_sound.volume = 0.5;
-
-    //Tristan to add
-    shuffleQuestions(questions);
-}
-
-
-// if quitQuizFeedback button clicked
-quit_quiz_feedback.onclick = ()=>{
-    window.location = "./welcome.html";
-    //window.location.reload();
-    winner_sound.currentTime = 0;
-    winner_sound.pause();
-}
 
 // ***Tristan END***
 
