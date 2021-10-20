@@ -954,4 +954,15 @@ footer button.show {
             align-items: center;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .info_box,
+  .quiz_box {
+    width: 400px;
+    top: 35%;
+  }
+  .result_box {
+    width: 400px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
