@@ -19,7 +19,7 @@
 }
 
 @mixin welcome-page-button() {
-  width: 500px;
+  width: clamp(250px, 30vw, 40vw);
   font-size: 2rem;
   font-weight: 500;
   color: $white;
@@ -36,14 +36,15 @@
 @mixin logo-big() {
   background-image: url("img/webzzle-logo-white.svg");
   width: 80%;
-  height: 60vh;
+  height: clamp(500px, 60vh, 80vh);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 }
 
 @mixin logo-small() {
   background-image: url("img/webzzle-logo-small.svg");
-  width: 80px;
+  width: clamp(40px, 80px, 100px);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;

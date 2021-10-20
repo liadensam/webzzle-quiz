@@ -4,6 +4,7 @@
   grid-column: 1;
   margin-top: 4rem;
   justify-self: center;
+  margin-left: 4rem;
 }
 
 /* signing pages allignment and title */
@@ -25,7 +26,7 @@
 .flex_form {
   list-style-type: none;
   @include flex-content-column-justify();
-  width: 40rem;
+  width: clamp(350px, 40vw, 50vw);
   gap: 30px;
 
   input {

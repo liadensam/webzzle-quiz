@@ -73,10 +73,10 @@ body > * {
 .logo {
   background-image: url("img/webzzle-logo-white.svg");
   width: 80%;
-  height: 60vh;
+  height: clamp(500px, 60vh, 80vh);
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: 4rem;
+  background-position: center;
   -ms-grid-column-align: center;
       justify-self: center;
 }
@@ -100,7 +100,7 @@ body > * {
 }
 
 .signin_btn button {
-  width: 500px;
+  width: clamp(250px, 30vw, 40vw);
   font-size: 2rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
@@ -125,7 +125,7 @@ body > * {
 }
 
 .signup_btn button {
-  width: 500px;
+  width: clamp(250px, 30vw, 40vw);
   font-size: 2rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
@@ -152,7 +152,7 @@ body > * {
 /* small logo */
 .logo_sm {
   background-image: url("img/webzzle-logo-small.svg");
-  width: 80px;
+  width: clamp(40px, 80px, 100px);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
@@ -161,6 +161,7 @@ body > * {
   margin-top: 4rem;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin-left: 4rem;
 }
 
 /* signing pages allignment and title */
@@ -208,7 +209,7 @@ body > * {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40rem;
+  width: clamp(350px, 40vw, 50vw);
   gap: 30px;
 }
 
@@ -318,7 +319,7 @@ li a:hover {
 /* logo small */
 .logo_sm {
   background-image: url("img/webzzle-logo-small.svg");
-  width: 80px;
+  width: clamp(40px, 80px, 100px);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: contain;
@@ -334,6 +335,7 @@ li a:hover {
   -ms-grid-column: 3;
   grid-column: 3;
   margin-top: 4.5rem;
+  margin-right: 4rem;
   -ms-grid-column-align: center;
       justify-self: center;
   cursor: pointer;
@@ -925,5 +927,31 @@ footer button.show {
 
 .feedback_box .feedback_text p {
   font-weight: 800;
+}
+
+@media screen and (max-width: 800px) {
+  .sign_main .sign_in_title,
+  .sign_main .sign_up_title,
+  .quiz_name {
+    font-size: 4.5rem;
+  }
+  .quiz_name {
+    line-height: 4.5rem;
+  }
+  .quiz_main_page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
