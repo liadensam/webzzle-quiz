@@ -1,24 +1,5 @@
 //WELCOME PAGE
 
-// window.onload = function(){
-//   document.getElementById("sign_in_welcome").onclick=function(){
-//     window.location = "./signin.html";
-//   }
-// }
-
-
-// document.getElementById("sign_up_welcome").onclick = function (){
-//   window.location = "./signup.html";
-// }
-
-
-// const sign_in_welcome = document.querySelector("#sign_in_welcome");
-// sign_in_welcome.addEventListener("click", function() { 
-
-//   window.location = "./signin.html";
-// }); 
-
-
 function sign_in_welcome() {
   document.getElementById("sign_in_welcome").onclick = function (){
   window.location = "./signin.html";
