@@ -28,9 +28,6 @@ document.getElementById("logout").onclick = function (){
   }
 }
 
-
-
-
 // if startQuiz button clicked
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
@@ -47,6 +44,11 @@ exit_btn.onclick = ()=>{
     quiz_name.style.opacity = "1";
 }
 
+// to shuffle the array and select only 4 questions
+shuffleQuestions = (inputQuestions) => {
+    inputQuestions.sort(()=> Math.random() - 0.5);
+    questions.length = 4;
+    }
 
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
@@ -95,11 +97,7 @@ restart_quiz.onclick = ()=>{
     question_sound.volume = 0.5;
 
     
-     //Tristan 
-     shuffleQuestions = (inputQuestions) => {
-        inputQuestions.sort(()=> Math.random() - 0.5);
-    }
-    
+    // calling the shuffle function
     shuffleQuestions(questions);
 }
 
@@ -161,12 +159,8 @@ restart_quiz_feedback.onclick = ()=>{
   question_sound.play();
   question_sound.volume = 0.5;
 
-   //Tristan 
-   shuffleQuestions = (inputQuestions) => {
-    inputQuestions.sort(()=> Math.random() - 0.5);
-}
-
-shuffleQuestions(questions);
+    // calling the shuffle function
+    shuffleQuestions(questions);
 }
 
 // if quitQuizFeedback button clicked
@@ -354,6 +348,7 @@ function startTimerLine(time){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
+    questions.length = 4; // to display the correct number of questions
     let totalQueCounTag = '<span>QUESTION '+ index +'/'+ questions.length +'</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
