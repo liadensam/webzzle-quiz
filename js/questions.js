@@ -1,6 +1,5 @@
 // creating an array and passing the number, questions, options, and answers
 
-
 let questions = [
   {
   numb: 1,
@@ -12,27 +11,87 @@ let questions = [
     "C. Hyperlinks and Text Markup Language"
   ]
 },
-  {
+{
   numb: 2,
-  question: "Choose the correct HTML element for the largest heading:",
-  answer: "A. &lt;h1&gt;",
+  question: "What does CSS stand for?",
+  answer: "B. Cascading Style Sheets",
   options: [
-    "A. &lt;h1&gt;",
-    "B. &ltheading&gt",
-    "C. &lth6&gt"
+    "A. Colorful Style Sheets",
+    "B. Cascading Style Sheets",
+    "C. Computer Style Sheets"
+  ]
+}, 
+{
+  numb: 3,
+  question: "JavaScript is the same as Java.",
+  answer: "B. False",
+  options: [
+    "A. True",
+    "B. False",
+    "C. I do not know"
   ]
 },
-  {
-  numb: 3,
-  question: "How can you create ordered list?",
-  answer: "B. &ltol&gt",
+
+{
+  numb: 4,
+  question: "What is Figma design?",
+  answer: "A. A collaborative interface design tool",
   options: [
-    "A. &ltlist&gt",
-    "B. &ltol&gt",
-    "C. &ltul&gt"
+    "A. A collaborative interface design tool",
+    "B. Sketch design tool",
+    "C. Drawing design tool"
+  ]
+},
+
+{
+  numb: 5,
+  question: "Where is Smári?",
+  answer:  "C. Somewhere over the rainbow",
+  options: [
+    "A. Moon",
+    "B. In Matrix",
+    "C. Somewhere over the rainbow"
   ]
 },
 ];
+
+
+
+
+
+
+// let questions = [
+//   {
+//   numb: 1,
+//   question: "What does HTML stand for?",
+//   answer: "B. Hyper Text Markup Language ",
+//   options: [
+//     "A. Home Tool Markup Language",
+//     "B. Hyper Text Markup Language ",
+//     "C. Hyperlinks and Text Markup Language"
+//   ]
+// },
+//   {
+//   numb: 2,
+//   question: "Choose the correct HTML element for the largest heading:",
+//   answer: "A. &lt;h1&gt;",
+//   options: [
+//     "A. &lt;h1&gt;",
+//     "B. &ltheading&gt",
+//     "C. &lth6&gt"
+//   ]
+// },
+//   {
+//   numb: 3,
+//   question: "How can you create ordered list?",
+//   answer: "B. &ltol&gt",
+//   options: [
+//     "A. &ltlist&gt",
+//     "B. &ltol&gt",
+//     "C. &ltul&gt"
+//   ]
+// },
+// ];
 // {
 //   numb: 4,
 //   question: "Choose the correct HTML element to define important text",
@@ -59,7 +118,9 @@ let questions = [
 //   answer: "A. True",
 //   options: [
 //     "A. True",
-//     "B. False"
+//     "B. False",
+//     "C. I do not know"
+
 //   ]
 // },
 // {
@@ -118,7 +179,8 @@ let questions = [
 //   answer: "A. No",
 //   options: [
 //     "A. No",
-//     "B. Yes"
+//     "B. Yes",
+//     "C. I do not know"
 //   ]
 // },
 // {
@@ -147,7 +209,8 @@ let questions = [
 //   answer: "B. False",
 //   options: [
 //     "A. True",
-//     "B. False"
+//     "B. False",
+//     "C. I do not know"
 //   ]
 // },
 // {
@@ -176,7 +239,8 @@ let questions = [
 //   answer: "B. False",
 //   options: [
 //     "A. True",
-//     "B. False"
+//     "B. False",
+//     "C. I do not know"
 //   ]
 // },
 // {
@@ -263,8 +327,6 @@ let questions = [
 //   numb: 27,
 //   question: "Where is Smári?",
 //   answer:  "A. Moon",
-//   "B. In Matrix",
-//   "C. In neverland",
 //   options: [
 //     "A. Moon",
 //     "B. In Matrix",
@@ -275,8 +337,6 @@ let questions = [
 //   numb: 28,
 //   question: "What will Siggi listen to in the car on the way home?",
 //   answer:  "A. Cure",
-//   "B. Spice girls",
-//   "C. Britney Spears",
 //   options: [
 //     "A. Cure",
 //     "B. Spice girls",
