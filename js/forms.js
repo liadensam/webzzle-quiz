@@ -66,4 +66,5 @@ const signIn = e => {
         location.href = "./quiz.html";
     }
     e.preventDefault();
+    
 }

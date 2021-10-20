@@ -43,6 +43,8 @@ start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
     start_btn.style.display = "none";
     quiz_name.style.display = "none";
+
+    
 }
 
 // if exitQuiz button clicked
@@ -52,6 +54,14 @@ exit_btn.onclick = ()=>{
     quiz_name.style.display = "";
 }
 
+//Tristan to add 
+
+
+
+shuffleQuestions = (inputQuestions) => {
+inputQuestions.sort(()=> Math.random() - 0.5);
+questions.length = 4;
+}
 
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
@@ -63,6 +73,10 @@ continue_btn.onclick = ()=>{
     startTimerLine(0); //calling startTimerLine function
     question_sound.play();
     question_sound.volume = 0.5;
+    
+    shuffleQuestions(questions);
+
+
 }
 
 let timeValue =  15;
@@ -99,11 +113,8 @@ restart_quiz.onclick = ()=>{
     question_sound.play();
     question_sound.volume = 0.5;
     
-    //Tristan 
-    shuffleQuestions = (inputQuestions) => {
-        inputQuestions.sort(()=> Math.random() - 0.5);
-    }
-    
+    //Tristan to add
+
     shuffleQuestions(questions);
 }
 
@@ -163,11 +174,7 @@ restart_quiz_feedback.onclick = ()=>{
     question_sound.play();
     question_sound.volume = 0.5;
 
-      //Tristan 
-    shuffleQuestions = (inputQuestions) => {
-        inputQuestions.sort(()=> Math.random() - 0.5);
-    }
-    
+    //Tristan to add
     shuffleQuestions(questions);
 }
 
@@ -214,6 +221,7 @@ next_btn.onclick = ()=>{
 
 // getting questions and options from array
 function showQuestions(index){
+    
     const que_text = document.querySelector(".que_text");
 
     //creating a new span and div tag for question and option and passing the value using array index
@@ -347,6 +355,7 @@ function startTimerLine(time){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
+    questions.length = 4; // Tristan to add
     let totalQueCounTag = '<span>QUESTION '+ index +'/'+ questions.length +'</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
