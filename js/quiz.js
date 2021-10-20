@@ -6,6 +6,8 @@ const exit_btn = info_box.querySelector(".buttons .quit");
 const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
+const feedback_btn = document.querySelector(".feedback_btn"); // Tristan
+const feedback_box = document.querySelector(".feedback_box"); // Tristan
 const option_list = document.querySelector(".option_list");
 const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
@@ -92,6 +94,12 @@ restart_quiz.onclick = ()=>{
     question_sound.volume = 0.5;
 
     
+     //Tristan 
+     shuffleQuestions = (inputQuestions) => {
+        inputQuestions.sort(()=> Math.random() - 0.5);
+    }
+    
+    shuffleQuestions(questions);
 }
 
 // if quitQuiz button clicked
@@ -103,6 +111,72 @@ quit_quiz.onclick = ()=>{
 }
 
 
+// ***Tristan START***
+
+const feedback_quiz = result_box.querySelector(".feedback_btn"); //Tristan
+const restart_quiz_feedback = feedback_box.querySelector(".buttons .restart");
+const quit_quiz_feedback = feedback_box.querySelector(".buttons .quit");
+
+
+//if SeeCorrectAnswers button clicked
+feedback_quiz.onclick = ()=>{
+    info_box.classList.remove("activeInfo"); //hide info box
+    result_box.classList.remove("activeResult"); //hide result box
+    quiz_box.classList.remove("activeQuiz"); //hide quiz box
+    feedback_box.classList.add("activeFeedback") //show feedback page
+
+    const feedbackText = document.querySelector(".feedback_text"); 
+    const uniqueQuestions = [...new Set(questions)];
+    
+    
+    for(let i=0; i < questions.length; i++) { 
+    feedbackText.innerHTML += +uniqueQuestions[i].numb+". "+uniqueQuestions[i].question+"<p>"+uniqueQuestions[i].answer+"</p><br>";
+    }
+
+}
+
+
+// if restartQuizFeedback button clicked
+restart_quiz_feedback.onclick = ()=>{
+  quiz_box.classList.add("activeQuiz"); //show quiz box
+  result_box.classList.remove("activeResult"); //hide result box
+  feedback_box.classList.remove("activeFeedback") //hide feedback page
+  timeValue = 15;
+  que_count = 0;
+  que_numb = 1;
+  userScore = 0;
+  widthValue = 0;
+  showQuestions(que_count); //calling showQestions function
+  queCounter(que_numb); //passing que_numb value to queCounter
+  clearInterval(counter); //clear counter
+  clearInterval(counterLine); //clear counterLine
+  //window.location.reload(); //Tristan -> to prevent duplicates in feedback page
+  startTimer(timeValue); //calling startTimer function
+  startTimerLine(widthValue); //calling startTimerLine function
+  timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
+  next_btn.classList.remove("show"); //hide the next button
+  winner_sound.currentTime = 0;
+  winner_sound.pause();
+  question_sound.play();
+  question_sound.volume = 0.5;
+
+   //Tristan 
+   shuffleQuestions = (inputQuestions) => {
+    inputQuestions.sort(()=> Math.random() - 0.5);
+}
+
+shuffleQuestions(questions);
+}
+
+// if quitQuizFeedback button clicked
+quit_quiz_feedback.onclick = ()=>{
+  window.location = "./welcome.html";
+  //window.location.reload();
+  winner_sound.currentTime = 0;
+  winner_sound.pause();
+}
+
+// ***Tristan END***
 
 
 
