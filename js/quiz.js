@@ -347,7 +347,7 @@ function startTimerLine(time){
         time += 1; //upgrading time value with 1
         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
         if(time > 549){ //if time value is greater than 549
-            clearInterval(counterLine); //clear counterLine
+          clearInterval(counterLine); //clear counterLine
         }
     }
 }
