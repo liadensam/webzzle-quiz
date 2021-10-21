@@ -44,11 +44,12 @@ exit_btn.onclick = ()=>{
     quiz_name.style.opacity = "1";
 }
 
-// to shuffle the array and select only 4 questions
+//to shuffle the array and select only 4 questions
 shuffleQuestions = (inputQuestions) => {
     inputQuestions.sort(()=> Math.random() - 0.5);
     questions.length = 4;
-    }
+  }
+
 
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
