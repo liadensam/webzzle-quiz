@@ -44,11 +44,16 @@ exit_btn.onclick = ()=>{
     quiz_name.style.opacity = "1";
 }
 
-// to shuffle the array and select only 4 questions
+//to shuffle the array and select only 4 questions
 shuffleQuestions = (inputQuestions) => {
     inputQuestions.sort(()=> Math.random() - 0.5);
     questions.length = 4;
-    }
+    // inputQuestions.sort(()=> Math.random() - questions.length-1);
+  }
+
+
+
+
 
 // if continueQuiz button clicked
 continue_btn.onclick = ()=>{
@@ -60,6 +65,7 @@ continue_btn.onclick = ()=>{
     startTimerLine(0); //calling startTimerLine function
     question_sound.play();
     question_sound.volume = 0.5;
+    shuffleQuestions(questions);
 }
 
 let timeValue =  15;
