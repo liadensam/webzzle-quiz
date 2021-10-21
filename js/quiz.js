@@ -48,10 +48,20 @@ exit_btn.onclick = ()=>{
 shuffleQuestions = (inputQuestions) => {
     inputQuestions.sort(()=> Math.random() - 0.5);
     questions.length = 4;
-    // inputQuestions.sort(()=> Math.random() - questions.length-1);
   }
 
+// Array.prototype.shuffle = function () {
+//   let input = this;
 
+//   for (let i = input.length - 1; i >= 0; i--) {
+//     let randomIndex = Math.floor(Math.random() * (i + 1));
+//     let itemAtIndex = input[randomIndex];
+
+//     input[randomIndex] = input[i];
+//     input[i] = itemAtIndex;
+//   }
+//   return input;
+// }
 
 
 
