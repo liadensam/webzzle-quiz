@@ -60,6 +60,7 @@ continue_btn.onclick = ()=>{
     startTimerLine(0); //calling startTimerLine function
     question_sound.play();
     question_sound.volume = 0.5;
+    shuffleQuestions(questions);
 }
 
 let timeValue =  15;
@@ -335,7 +336,7 @@ function startTimerLine(time){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
-    questions.length = 4; // to display the correct number of questions
+    // questions.length = 4; // to display the correct number of questions
     let totalQueCounTag = '<span>QUESTION '+ index +'/'+ questions.length +'</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
