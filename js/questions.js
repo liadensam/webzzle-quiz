@@ -53,6 +53,16 @@ let questions = [
     "C. In Lapland"
   ]
 },
+
+//   numb: 6,
+//   question: "Choose the correct HTML element to define important text",
+//   answer: "C. &ltstrong&gt",
+//   options: [
+//     "A. &ltimportant&gt",
+//     "B. &lti&gt",
+//     "C. &ltstrong&gt"
+//   ]
+// },
 ];
 
 
@@ -205,7 +215,7 @@ let questions = [
 // },
 // {
 //   numb: 15,
-//   question: "The external JavaScript file must contain the <script> tag.",
+//   question: "The external JavaScript file must contain the &ltscript&gt tag.",
 //   answer: "B. False",
 //   options: [
 //     "A. True",
