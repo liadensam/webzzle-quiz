@@ -22,7 +22,7 @@ const answer_sound = document.getElementById("answer_sound");
 //logout
 document.getElementById("logout").onclick = function (){
   if(confirm("Are you sure you want to logout?")){
-      window.location = "./welcome.html";
+      window.location = "./index.html";
   }else{
       //stays on the same page          
   }
@@ -103,7 +103,7 @@ restart_quiz.onclick = ()=>{
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
-    window.location = "./welcome.html";
+    window.location = "./index.html";
     //window.location.reload();
     winner_sound.currentTime = 0;
     winner_sound.pause();
@@ -162,7 +162,7 @@ document.querySelectorAll('.restart').forEach(item => {
 // if quitQuiz button clicked
 document.querySelectorAll('.quit').forEach(item => {
     item.addEventListener('click', event => {
-        window.location = "./welcome.html";
+        window.location = "./index.html";
         //window.location.reload();
         winner_sound.currentTime = 0;
         winner_sound.pause();
