@@ -72,45 +72,6 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-const restart_quiz = result_box.querySelector(".buttons .restart");
-const quit_quiz = result_box.querySelector(".buttons .quit");
-
-// if restartQuiz button clicked
-restart_quiz.onclick = ()=>{
-    quiz_box.classList.add("activeQuiz"); //show quiz box
-    result_box.classList.remove("activeResult"); //hide result box
-    timeValue = 15;
-    que_count = 0;
-    que_numb = 1;
-    userScore = 0;
-    widthValue = 0;
-    showQuestions(que_count); //calling showQestions function
-    queCounter(que_numb); //passing que_numb value to queCounter
-    clearInterval(counter); //clear counter
-    clearInterval(counterLine); //clear counterLine
-    startTimer(timeValue); //calling startTimer function
-    startTimerLine(widthValue); //calling startTimerLine function
-    document. querySelector(".feedback_text").innerHTML = ""; //Tristan -> to prevent duplicates in feedback page
-    timeText.textContent = "Remaining Time:"; //change the text of timeText to Time Left
-    next_btn.classList.remove("show"); //hide the next button
-    winner_sound.currentTime = 0;
-    winner_sound.pause();
-    question_sound.play();
-    question_sound.volume = 0.5;
-
-    
-    // calling the shuffle function
-    shuffleQuestions(questions);
-}
-
-// if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
-    window.location = "./index.html";
-    //window.location.reload();
-    winner_sound.currentTime = 0;
-    winner_sound.pause();
-}
-
 //if SeeCorrectAnswers button clicked
 const feedback_quiz = result_box.querySelector(".feedback_btn");
 
