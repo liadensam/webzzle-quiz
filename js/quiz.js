@@ -82,9 +82,10 @@ feedback_quiz.onclick = ()=>{
     feedback_box.classList.add("activeFeedback") //show feedback page
 
     const feedbackText = document.querySelector(".feedback_text"); 
+    // to remove duplicates
     const uniqueQuestions = [...new Set(questions)];
     
-    
+    // loop to go through the array
     for(let i=0; i < questions.length; i++) { 
     feedbackText.innerHTML += uniqueQuestions[i].question+"<p>"+uniqueQuestions[i].answer+"</p><br>";
     }
